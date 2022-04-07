@@ -1,0 +1,12 @@
+.list {
+  list-style: none;
+
+  &__general__cocktails {
+    background-color: grey;
+  }
+
+  &__cocktail__box {
+    border-radius: 5%;
+    background-color: yellow;
+  }
+}

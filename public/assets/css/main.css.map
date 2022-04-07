@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["layout/_main.scss"],"names":[],"mappings":"AAAA;EACE,gBAAgB,EAAA;EAEhB;IACE,sBAAsB,EAAA;EAGxB;IACE,iBAAiB;IACjB,wBAAwB,EAAA","file":"main.css","sourcesContent":[".list {\n  list-style: none;\n\n  &__general__cocktails {\n    background-color: grey;\n  }\n\n  &__cocktail__box {\n    border-radius: 5%;\n    background-color: yellow;\n  }\n}\n"]}
