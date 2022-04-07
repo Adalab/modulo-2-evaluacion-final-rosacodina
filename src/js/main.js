@@ -8,7 +8,7 @@ button.addEventListener('click', (event) => {
   console.log('event'); //código a ejecutar
 });
 
-fetch('https://www.thecocktaildb.com/browse.php?s=margarita') //aquí le pasamos la URL donde queremos hacer la petición
+fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita') //aquí le pasamos la URL donde queremos hacer la petición
   .then(function (response) {
     //esta es la promesa
     return response.json();
