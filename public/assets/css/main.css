@@ -1,8 +1,6 @@
 .list {
   list-style: none; }
-  .list__general__cocktails {
-    background-color: grey; }
-  .list__cocktail__box {
+  .list__box {
     border-radius: 5%;
     background-color: yellow; }
 
