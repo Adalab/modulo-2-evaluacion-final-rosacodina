@@ -27,7 +27,13 @@ function fetchApi() {
 
 function createlist() {
   for (const item of cocktails) {
-    list.innerHTML += `<li> ${item.strDrink} </li>`;
+    list.innerHTML += `
+    <div>   
+      <li> ${item.strDrink} </li>
+      <img src = "${item.strDrinkThumb} " ></img>
+    </div>
+    
+    `;
   }
 }
 
