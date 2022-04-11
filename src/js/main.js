@@ -21,7 +21,6 @@ function fetchApi() {
       cocktails = data.drinks;
       console.log(cocktails);
       let searchValue = document.getElementById('search').value;
-
       search(searchValue, cocktails);
     });
 }
@@ -43,9 +42,9 @@ function createlist() {
 function search(term, cocktails) {
   //I deleted the previous search results of the list
   list.innerHTML = ``;
-  //For to do a cicle on the list in case the term is the same as one of the list items
+  //"For" to do a loop on the list in case the term is the same as one of the list items
   for (let i = 0; i < cocktails.length; i++) {
-    if (term == cocktails[i].strDrink) {
+    if (term.toLowerCase() === cocktails[i].strDrink.toLowerCase()) {
       console.log(term);
       console.log(cocktails[i].strDrink);
       list.innerHTML += `
