@@ -15,7 +15,7 @@ button.addEventListener('click', (event) => {
 });
 
 function fetchApi() {
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita') //aquí le pasamos la URL donde queremos hacer la petición
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita') //Here we give the URL in which we want to make the request
     .then((response) => response.json())
     .then((data) => {
       cocktails = data.drinks;
@@ -41,6 +41,9 @@ function createlist() {
 }
 
 function search(term, cocktails) {
+  //I deleted the previous search results of the list
+  list.innerHTML = ``;
+  //For to do a cicle on the list in case the term is the same as one of the list items
   for (let i = 0; i < cocktails.length; i++) {
     if (term == cocktails[i].strDrink) {
       console.log(term);
