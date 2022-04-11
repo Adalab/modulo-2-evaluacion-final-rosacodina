@@ -6,6 +6,7 @@ console.log('>> Ready :)');
 const button = document.querySelector('.js__buttonSearch');
 const list = document.querySelector('.js__list');
 
+//VARIABLES
 let cocktails = [];
 
 //FUNCIONES
@@ -19,7 +20,9 @@ function fetchApi() {
     .then((data) => {
       cocktails = data.drinks;
       console.log(cocktails);
-      createlist();
+      let searchValue = document.getElementById('search').value;
+
+      search(searchValue, cocktails);
     });
 }
 
@@ -30,10 +33,25 @@ function createlist() {
     list.innerHTML += `
     <div>   
       <li> ${item.strDrink} </li>
-      <img src = "${item.strDrinkThumb} " ></img>
+      <img src = "${item.strDrinkThumb}" class="image"></img>
     </div>
     
     `;
+  }
+}
+
+function search(term, cocktails) {
+  for (let i = 0; i < cocktails.length; i++) {
+    if (term == cocktails[i].strDrink) {
+      console.log(term);
+      console.log(cocktails[i].strDrink);
+      list.innerHTML += `
+        <div>   
+          <li> ${cocktails[i].strDrink} </li>
+          <img src = "${cocktails[i].strDrinkThumb}" class="image"></img>
+        </div>
+        `;
+    }
   }
 }
 
