@@ -8,6 +8,7 @@ const list = document.querySelector('.js__list');
 
 //VARIABLES
 let cocktails = [];
+let favourites = [];
 
 //FUNCIONES
 button.addEventListener('click', (event) => {
@@ -54,5 +55,14 @@ function search(term, cocktails) {
         </div>
         `;
     }
+  }
+}
+
+//FAVOURITES
+//escuchar cuando le doy click a cada cocktail y paa eso hacemos una función que lo que hace es escuchar el evento click de cada cocktail y la función manejadora que cuando hace clic escribe en console el número
+
+function listenAtCocktails() {
+  for (const item of list) {
+    item.addEventListener('clicl', handleClicList);
   }
 }
